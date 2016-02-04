@@ -6,10 +6,10 @@
         id        = "Star Wars Information"
         version   = "1.0.0">
 
-    <name>Star Wars Information</name>
+    <name>Everything Star Wars</name>
 
     <description>
-        An app holding ALL star wars information. From characters to movies, to species and starships.
+        You like Star Wars? Then you will love navigating through this app &amp; unlocking your inner FORCE.
     </description>
 
     <author href="http://michel-beaubien.com/" email="michelBeaubien@hotmail.com">
