@@ -1,0 +1,75 @@
+      <ion-header-bar align-title="left" class="header">
+        <h1 class="title">Star Wars Vehicles</h1>
+      </ion-header-bar>
+
+      <ion-content>
+
+      <dir-pagination-controls class="pagination" max-size="6" direction-links="true">
+      </dir-pagination-controls>
+
+      <div class="row responsive-md">
+      <div style="margin:0;" class="list card col" dir-paginate="vehicle in vehicles|itemsPerPage:2">
+
+        <div class="item item-avatar">
+          <h2>{{vehicle.name}}</h2>
+          <h4>{{vehicle.model}}</h4>
+          <h6>{{vehicle.manufacturer}}</h6>
+        </div><!--avatar-->
+
+        <div class="item item-body">
+          <img class="full-image" data-ng-src="img/vehicles/{{vehicle.name}}.jpg">
+
+          <div class="info">
+          <object data="img/icons/crew.svg">
+            <img src="img/icons/crew.png">
+          </object>
+          <p>{{vehicle.crew}}</p>
+          </div>
+
+          <div class="info">
+          <object data="img/icons/passengers.svg">
+            <img src="img/icons/passengers.png">
+          </object>
+          <p>{{vehicle.passengers}}</p>
+          </div>
+
+          <div class="info">
+          <object data="img/icons/cargo.svg">
+            <img src="img/icons/cargo.png">
+          </object>
+          <p>{{vehicle.cargo_capacity}}</p>
+          </div>
+
+          <div class="info">
+          <object data="img/icons/consume.svg">
+            <img src="img/icons/consume.png">
+          </object>
+          <p>{{vehicle.consumables}}</p>
+          </div>
+          
+          <div class="info">
+          <object data="img/icons/cost.svg">
+            <img src="img/icons/cost.png">
+          </object>
+          <p>{{vehicle.cost_in_credits}}</p>
+          </div>
+
+          <div class="info">
+          <object data="img/icons/length.svg">
+            <img src="img/icons/length.png">
+          </object>
+          <p>{{vehicle.length}}</p>
+          </div>
+
+          <div class="info">
+          <object data="img/icons/speed.svg">
+            <img src="img/icons/speed.png">
+          </object>
+          <p>{{vehicle.max_atmosphering_speed}}</p>
+          </div>
+        </div><!--item body-->
+
+      </div><!--list card-->
+      </div><!--row-->
+
+      </ion-content>

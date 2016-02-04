@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Star Wars API</title>
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/dirPagination.js"></script>
+    <script src="lib/angular-resource.js"></script>
+    <script src="cordova.js"></script>
+    <script src="js/main.js"></script>
+  </head>
+  <body ng-app="stars" ng-controller="starsController">
+    <h2 class="hidden">Star Wars API</h2>
+
+    <ion-pane>
+
+      <ion-nav-view>
+      <!--Views are going to be here-->
+      </ion-nav-view>
+
+      <ion-tabs class="footer">
+        <ion-tab icon="ion-android-person" ui-sref="stars">
+          <ion-nav-view name="stars"></ion-nav-view>
+        </ion-tab>
+
+        <ion-tab icon="ion-android-film" ui-sref="films">
+          <ion-nav-view name="films"></ion-nav-view>
+        </ion-tab>
+
+        <ion-tab icon="ion-android-globe" ui-sref="planets">
+          <ion-nav-view name="planets"></ion-nav-view>
+        </ion-tab>
+
+        <ion-tab icon="ion-transgender" ui-sref="species">
+          <ion-nav-view name="species"></ion-nav-view>
+        </ion-tab>
+
+        <ion-tab icon="ion-paper-airplane" ui-sref="starships">
+          <ion-nav-view name="starships"></ion-nav-view>
+        </ion-tab>
+
+        <ion-tab icon="ion-model-s" ui-sref="vehicles">
+          <ion-nav-view name="vehicles"></ion-nav-view>
+        </ion-tab>
+      </ion-tabs>
+
+    </ion-pane>
+
+  </body>
+</html>

@@ -1,0 +1,49 @@
+      <ion-header-bar align-title="left" class="header">
+      <button id="back" class="button button-left button-dark ion-android-arrow-back" ui-sref="films"></button>
+        <h1 class="title" data-ng-bind-html="title"></h1>
+      </ion-header-bar>
+
+      <ion-content>
+
+      <div style="margin:0;" class="list card">
+        <div class="item item-body thisBody">
+
+          <div class="row responsive-md" id="infoWrapper">
+
+          <div class="filmInfo col">
+          <object data="img/icons/episode.svg">
+            <img src="img/icons/episode.png">
+          </object>
+          <p>Star Wars Episode <span style="color:#ffcc00;" data-ng-bind-html="episode_id"></span></p>
+          </div>
+
+          <div class="filmInfo col">
+          <object data="img/icons/films.svg">
+            <img src="img/icons/films.png">
+          </object>
+          <p data-ng-bind-html="release_date"></p>
+          </div>
+
+          <div class="filmInfo col">
+          <object data="img/icons/director.svg">
+            <img src="img/icons/director.png">
+          </object>
+          <p data-ng-bind-html="director"></p>
+          </div>
+
+          <div class="filmInfo col">
+          <object data="img/icons/producer.svg">
+            <img src="img/icons/producer.png">
+          </object>
+          <p data-ng-bind-html="producer"></p>
+          </div>
+
+          </div>
+
+          <p id="galaxy">A long time ago in a galaxy far, far away...</p>
+          <p id="crawlText" data-ng-bind-html="opening_crawl"></p>
+        </div><!--item body-->
+
+      </div><!--list card-->
+
+      </ion-content>

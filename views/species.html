@@ -1,0 +1,74 @@
+      <ion-header-bar align-title="left" class="header">
+        <h1 class="title">Star Wars Species</h1>
+      </ion-header-bar>
+
+      <ion-content>
+
+      <dir-pagination-controls class="pagination" max-size="6" direction-links="true">
+      </dir-pagination-controls>
+
+      <div class="row responsive-md">
+      <div style="margin:0;" class="list card col" dir-paginate="specie in species|itemsPerPage:2">
+
+        <div class="item item-avatar">
+          <img data-ng-src="img/species/{{specie.name}}.jpg">
+          <h2>{{specie.name}}</h2>
+        </div><!--avatar-->
+
+        <div class="item item-body">
+
+          <div class="info">
+          <object data="img/icons/language.svg">
+            <img src="img/icons/language.png">
+          </object>
+          <p>{{specie.language}}</p>
+          </div>
+
+          <div class="info">
+          <object data="img/icons/classification.svg">
+            <img src="img/icons/classification.png">
+          </object>
+          <p>{{specie.classification}}</p>
+          </div>
+
+          <div class="info">
+          <object data="img/icons/height.svg">
+            <img src="img/icons/height.png">
+          </object>
+          <p>{{specie.average_height}}</p>
+          </div>
+
+          <div class="info">
+          <object data="img/icons/life.svg">
+            <img src="img/icons/life.png">
+          </object>
+          <p>{{specie.average_lifespan}}</p>
+          </div>
+
+          <div class="info">
+          <object data="img/icons/eye.svg">
+            <img src="img/icons/eye.png">
+          </object>
+          <p>{{specie.eye_colors}}</p>
+          </div>
+
+          <div class="info">
+          <object data="img/icons/hair.svg">
+            <img src="img/icons/hair.png">
+          </object>
+          <p>{{specie.hair_colors}}</p>
+          </div>
+
+          <div class="info">
+          <object data="img/icons/skin.svg">
+            <img src="img/icons/skin.png">
+          </object>
+          <p>{{specie.skin_colors}}</p>
+          </div>
+
+        </div><!--item body-->
+
+      </div><!--list card-->
+      </div><!--row-->
+
+      </ion-content> 

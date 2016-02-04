@@ -1,0 +1,83 @@
+      <ion-header-bar align-title="left" class="header">
+        <h1 class="title">Star Wars Starships</h1>
+      </ion-header-bar>
+
+      <ion-content>
+
+      <dir-pagination-controls class="pagination" max-size="6" direction-links="true">
+      </dir-pagination-controls>
+
+      <div class="row responsive-md">
+      <div style="margin:0;" class="list card col" dir-paginate="starship in starships|itemsPerPage:2">
+
+        <div class="item item-avatar">
+          <h2>{{starship.name}}</h2>
+          <h5>{{starship.starship_class}}</h5>
+          <h6>{{starship.model}}</h6>
+        </div><!--avatar-->
+
+        <div class="item item-body">
+          <img class="full-image" data-ng-src="img/ships/{{starship.name}}.jpg">
+
+          <div class="info">
+          <object data="img/icons/crew.svg">
+            <img src="img/icons/crew.png">
+          </object>
+          <p>{{starship.crew}}</p>
+          </div>
+
+          <div class="info">
+          <object data="img/icons/passengers.svg">
+            <img src="img/icons/passengers.png">
+          </object>
+          <p>{{starship.passengers}}</p>
+          </div>
+
+          <div class="info">
+          <object data="img/icons/cargo.svg">
+            <img src="img/icons/cargo.png">
+          </object>
+          <p>{{starship.cargo_capacity}}</p>
+          </div>
+
+          <div class="info">
+          <object data="img/icons/consume.svg">
+            <img src="img/icons/consume.png">
+          </object>
+          <p>{{starship.consumables}}</p>
+          </div>
+
+          <div class="info">
+          <object data="img/icons/cost.svg">
+            <img src="img/icons/cost.png">
+          </object>
+          <p>{{starship.cost_in_credits}}</p>
+          </div>
+
+          <div class="info">
+          <object data="img/icons/length.svg">
+            <img src="img/icons/length.png">
+          </object>
+          <p>{{starship.length}}</p>
+          </div>
+
+          <div class="info">
+          <object data="img/icons/hyperdrive.svg">
+            <img src="img/icons/hyperdrive.png">
+          </object>
+          <p>{{starship.hyperdrive_rating}}</p>
+          </div>
+
+          <div class="info">
+          <object data="img/icons/speed.svg">
+            <img src="img/icons/speed.png">
+          </object>
+          <p>{{starship.max_atmosphering_speed}}</p>
+          </div>
+
+        </div><!--item body-->
+
+      </div><!--list card-->
+      </div><!--row-->
+
+      </ion-content>

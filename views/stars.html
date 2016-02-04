@@ -1,0 +1,99 @@
+      <ion-header-bar  class="header">
+        <div id="buttonBar" class="button row">
+          <a class="button col" data-ng-click="tenStars()">
+            <span class="large">1-10</span><span class="small">1</span>
+          </a>
+          <a class="button col" data-ng-click="twentyStars()">
+            <span class="large">11-20</span><span class="small">2</span>
+          </a>
+          <a class="button col" data-ng-click="thirtyStars()">
+            <span class="large">21-30</span><span class="small">3</span>
+          </a>
+          <a class="button col" data-ng-click="fortyStars()">
+            <span class="large">31-40</span><span class="small">4</span>
+          </a>
+          <a class="button col" data-ng-click="fiftyStars()">
+            <span class="large">41-50</span><span class="small">5</span>
+          </a>
+          <a class="button col" data-ng-click="sixtyStars()">
+            <span class="large">51-60</span><span class="small">6</span>
+          </a>
+          <a class="button col" data-ng-click="seventyStars()">
+            <span class="large">61-70</span><span class="small">7</span>
+          </a>
+          <a class="button col" data-ng-click="eightyStars()">
+            <span class="large">71-80</span><span class="small">8</span>
+          </a>
+          <a class="button col" data-ng-click="ninetyStars()">
+            <span class="large">81-87</span><span class="small">9</span>
+          </a>
+        </div>
+      </ion-header-bar>
+
+      <ion-content>
+
+      <div class="row responsive-md">
+      <div style="margin:0;" class="list card col" ng-repeat="character in characters">
+
+        <div class="item item-avatar">
+          <img data-ng-src="img/thumbs/{{character.name}}.jpg">
+          <h2>{{character.name}}</h2>
+        </div><!--avatar-->
+
+        <div class="item item-body">
+          <img class="full-image" data-ng-src="img/backs/{{character.name}}.jpg">
+
+          <div class="info">
+          <object data="img/icons/life.svg">
+            <img src="img/icons/life.png">
+          </object>
+          <p>{{character.birth_year}}</p>
+          </div>
+
+          <div class="info">
+          <object data="img/icons/eye.svg">
+            <img src="img/icons/eye.png">
+          </object>
+          <p>{{character.eye_color}}</p>
+          </div>
+
+          <div class="info">
+          <object data="img/icons/gender.svg">
+            <img src="img/icons/gender.png">
+          </object>
+          <p>{{character.gender}}</p>
+          </div>
+
+          <div class="info">
+          <object data="img/icons/hair.svg">
+            <img src="img/icons/hair.png">
+          </object>
+          <p>{{character.hair_color}}</p>
+          </div>
+
+          <div class="info">
+          <object data="img/icons/height.svg">
+            <img src="img/icons/height.png">
+          </object>
+          <p>{{character.height}}</p>
+          </div>
+
+          <div class="info">          
+          <object data="img/icons/mass.svg">
+            <img src="img/icons/mass.png">
+          </object>
+          <p>{{character.mass}}</p>
+          </div>
+
+          <div class="info">
+          <object data="img/icons/skin.svg">
+            <img src="img/icons/skin.png">
+          </object>
+          <p>{{character.skin_color}}</p>
+          </div>
+        </div><!--item body-->
+
+      </div><!--list card-->
+      </div><!--row-->
+
+      </ion-content>

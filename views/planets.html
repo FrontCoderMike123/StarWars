@@ -1,0 +1,66 @@
+      <ion-header-bar align-title="left" class="header">
+        <h1 class="title">Star Wars Planets</h1>
+      </ion-header-bar>
+
+      <ion-content>
+
+      <dir-pagination-controls class="pagination" max-size="6" direction-links="true">
+      </dir-pagination-controls>
+
+      <div class="row responsive-md">
+      <div style="margin:0;" class="list card col" dir-paginate="planet in planets|itemsPerPage:2">
+
+        <div class="item item-avatar">
+          <img data-ng-src="img/planets/{{planet.name}}.jpg" alt="{{planet.name}}">
+          <h2>{{planet.name}}</h2>
+        </div><!--avatar-->
+
+        <div class="item item-body">
+
+          <div class="info">
+          <object data="img/icons/pop.svg">
+            <img src="img/icons/pop.png">
+          </object>
+          <p>{{planet.population}}</p>
+          </div>
+
+          <div class="info">
+          <object data="img/icons/terrain.svg">
+            <img src="img/icons/terrain.png">
+          </object>
+          <p>{{planet.terrain}}</p>
+          </div>
+
+          <div class="info">
+          <object data="img/icons/climate.svg">
+            <img src="img/icons/climate.png">
+          </object>
+          <p>{{planet.climate}}</p>
+          </div>
+
+          <div class="info">
+          <object data="img/icons/diamater.svg">
+            <img src="img/icons/diamater.png">
+          </object>
+          <p>{{planet.diameter}}</p>
+          </div>
+
+          <div class="info">
+          <object data="img/icons/orbit.svg">
+            <img src="img/icons/orbit.png">
+          </object>
+          <p>{{planet.orbital_period}}</p>
+          </div>
+
+          <div class="info">
+          <object data="img/icons/rotation.svg">
+            <img src="img/icons/rotation.png">
+          </object>
+          <p>{{planet.rotation_period}}</p>
+          </div>
+        </div><!--item body-->
+
+      </div><!--list card-->
+      </div><!--row-->
+
+      </ion-content>

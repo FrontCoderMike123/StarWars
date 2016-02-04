@@ -1,0 +1,23 @@
+      <ion-header-bar align-title="left" class="header">
+        <h1 class="title">Star Wars Movies</h1>
+      </ion-header-bar>
+
+      <ion-view title="films">
+      <ion-content>
+
+      <div class="row responsive-md">
+      <div style="margin:0;" class="list card col" ng-repeat="film in films">
+        <!--| orderBy:'episode_id' this is here because when put into the repeat, YES it put the posters in 
+        order of episode...BUT!!! the ID did not follow... sooo phantom menace went into slot number 1, but still had NEW HOPES id attached to it...-->
+
+        <a href="#/films/{{$index}}">
+          <div class="item item-body">
+          <img class="full-image" data-ng-src="img/posters/{{film.episode_id}}.jpg">
+          </div>
+        </a>
+
+      </div><!--list card-->
+      </div><!--row-->
+
+      </ion-content>
+      </ion-view>
